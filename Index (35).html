@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<!-- WENDY GALLERY INDEX 27 FINAL | v2026-10-11 | 210幅 山水116 花鳥78 人物16 | 全權限開放版 -->
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>WENDY FUNG - INDEX 27 FINAL v2026-10-11</title>
+<style>
+:root{--paper:#fdfaf3;--ink:#2b2117;--brown:#3d2b1f;--line:#e8ddd0;--green:#4a7c59;--pink:#c97a7a;--blue:#6b7c8a}
+*{box-sizing:border-box;margin:0;padding:0}body{font-family:"Noto Serif TC","Songti SC",serif;background:var(--paper);color:var(--ink);line-height:1.8}
+header{text-align:center;padding:28px 16px 12px;border-bottom:2px solid var(--brown)}header h1{font-size:32px;letter-spacing:0.2em}header h1 span.en{display:block;font-size:14px;font-weight:400;color:#6b5a44;margin-top:4px}header .ver{font-size:11px;background:#111;color:#fff;padding:3px 10px;border-radius:12px;font-weight:700}
+#preface{max-width:860px;margin:20px auto;padding:22px 26px;background:#fff;border:1px solid var(--line);border-radius:12px;box-shadow:0 2px 10px rgba(0,0,0,0.04)}#preface h2{text-align:center;font-size:20px;margin-bottom:10px;letter-spacing:0.15em}#preface .content{white-space:pre-wrap;font-size:14px;line-height:2.0;text-align:justify}
+.filters{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;padding:14px;position:sticky;top:0;background:rgba(253,250,243,0.97);backdrop-filter:blur(6px);z-index:9;border-bottom:1px solid var(--line)}.filters button{padding:8px 14px;border-radius:18px;border:1px solid var(--line);background:#fff;cursor:pointer;font-size:12px;transition:0.15s}.filters button.active{background:var(--brown);color:#fff}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:12px;padding:16px;max-width:1500px;margin:0 auto}
+.card{background:#fff;border:1px solid var(--line);border-radius:10px;overflow:hidden;cursor:pointer;position:relative;transition:0.15s}.card:hover{transform:translateY(-2px);box-shadow:0 8px 18px rgba(0,0,0,0.08)}
+.card .numBadge{position:absolute;left:6px;top:6px;background:rgba(17,17,17,0.85);color:#fff;font-size:13px;font-weight:800;padding:4px 8px;border-radius:8px;z-index:2}
+.card img{width:100%;height:190px;object-fit:cover;background:#eee;display:block;transition:transform 0.3s}.meta{padding:6px 10px;text-align:center}.badge{font-size:10px;padding:2px 6px;border-radius:6px;color:#fff}.b-山水{background:var(--green)}.b-花鳥{background:var(--pink)}.b-人物{background:var(--blue)}.id{font-size:10px;opacity:0.5}
+.lightbox{position:fixed;inset:0;background:rgba(0,0,0,0.92);display:none;z-index:100}.lightbox.on{display:flex}
+.lb-img-wrap{flex:1 1 70%;display:flex;align-items:center;justify-content:center;position:relative;background:#0a0a0a;padding:10px}.lb-img-wrap img{max-width:100%;max-height:92vh;object-fit:contain;transition:transform 0.3s}
+.lb-info{flex:0 0 30%;background:#fffdf7;padding:16px;overflow:auto;display:flex;flex-direction:column;gap:10px}
+.lb-info .lb-title{font-size:16px;font-weight:800}.lb-meta{font-size:11px;opacity:0.7;line-height:1.5}.lb-note{font-size:13px;white-space:pre-wrap;background:#fff;padding:10px;border-radius:8px;border:1px solid #e8ddd0;min-height:80px}
+.lb-arrow{position:absolute;top:50%;transform:translateY(-50%);background:rgba(255,255,255,0.95);border:none;width:46px;height:46px;border-radius:50%;font-size:26px;cursor:pointer;z-index:103;box-shadow:0 2px 8px rgba(0,0,0,0.4)}.lb-arrow.left{left:12px}.lb-arrow.right{right:12px}
+.lb-counter{position:absolute;top:10px;left:50%;transform:translateX(-50%);background:rgba(0,0,0,0.7);color:#fff;padding:3px 10px;border-radius:10px;font-size:11px;z-index:104}
+.close{position:absolute;top:8px;right:14px;color:#fff;font-size:30px;cursor:pointer;z-index:105;background:rgba(0,0,0,0.4);width:36px;height:36px;border-radius:50%;display:flex;align-items:center;justify-content:center}
+#adminBtn{position:fixed;right:14px;bottom:14px;background:#111;color:#fff;border:none;border-radius:22px;padding:10px 16px;font-size:12px;cursor:pointer;z-index:101;box-shadow:0 4px 12px rgba(0,0,0,0.3)}
+#adminPanel{position:fixed;right:0;top:0;width:460px;max-width:95vw;height:100vh;background:#fffdf7;border-left:2px solid #111;z-index:102;transform:translateX(100%);transition:0.28s;overflow:auto;padding:14px}#adminPanel.open{transform:translateX(0)}
+#adminPanel h3{font-size:15px;margin:14px 0 6px;border-bottom:1px solid var(--line);padding-bottom:4px}
+#adminPanel input,#adminPanel select,#adminPanel textarea{width:100%;padding:7px;border:1px solid var(--line);border-radius:6px;font-family:inherit;margin:4px 0 6px;font-size:12px}
+#adminPanel button.small{padding:5px 10px;border:1px solid var(--line);background:#fff;border-radius:5px;cursor:pointer;margin:2px;font-size:11px}
+#adminPanel button.small.primary{background:#111;color:#fff}
+.row{display:flex;gap:6px}.row>*{flex:1}
+.overlay{position:fixed;inset:0;background:rgba(0,0,0,0.25);display:none;z-index:101}.overlay.on{display:block}
+#contact,#guestbook{max-width:860px;margin:22px auto;padding:18px 22px;background:#fff;border:1px solid var(--line);border-radius:12px}
+#contact h2,#guestbook h2{text-align:center;font-size:18px;margin-bottom:10px}
+.contact-content{white-space:pre-wrap;font-size:13px;line-height:1.8;background:#fdf6e9;border:1px dashed #e0c9a0;padding:12px;border-radius:8px}
+.rotate-btn{padding:4px 8px;margin:2px;border:1px solid #ccc;background:#fff;border-radius:4px;cursor:pointer;font-size:11px}.rotate-btn:hover{background:#eee}
+.guest-form{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:10px}.guest-item{border-bottom:1px solid #f0e6d6;padding:8px 0;font-size:13px}.guest-item .meta{font-size:10px;opacity:0.6}
+@media(max-width:900px){.lightbox.on{flex-direction:column}.lb-img-wrap{flex:0 0 62%}.lb-info{flex:0 0 38%;width:100vw;max-width:100vw}}
+</style>
+</head>
+<body>
+<header>
+<h1>WENDY FUNG <span class="en">From Healthcare Professional to Amateur Painter</span></h1>
+<p>2026年 · 210幅 · 山水 116 / 花鳥 78 / 人物 16 <span class="ver">INDEX 27 v2026-10-11 FINAL</span></p>
+<p style="font-size:11px;opacity:0.7;margin-top:4px">Chrome顯示 Index (27).html 是下載次數，不是版本。真正版本是上面黑色 INDEX 27</p>
+</header>
+
+<section id="preface">
+<h2>序 — 從醫護到業餘畫家</h2>
+<div class="content" id="prefaceContent"></div>
+</section>
+
+<div class="filters">
+<button class="active" data-f="全部" onclick="filterTo('全部')">全部 210</button>
+<button data-f="山水" onclick="filterTo('山水')">山水 116</button>
+<button data-f="花鳥" onclick="filterTo('花鳥')">花鳥 78</button>
+<button data-f="人物" onclick="filterTo('人物')">人物 16</button>
+</div>
+
+<div class="grid" id="grid"></div>
+
+<div class="lightbox" id="lb">
+<span class="close" onclick="closeLb()">&times;</span>
+<div class="lb-counter" id="lbCounter"></div>
+<button class="lb-arrow left" onclick="lbPrev(event)">‹</button>
+<button class="lb-arrow right" onclick="lbNext(event)">›</button>
+<div class="lb-img-wrap"><img id="lbImg"></div>
+<div class="lb-info" id="lbInfo"></div>
+</div>
+
+<section id="contact">
+<h2>聯絡我 / Contact</h2>
+<div class="contact-content" id="contactContent"></div>
+<p style="font-size:10px;opacity:0.5;margin-top:6px">可在小管家 → 改聯絡資料 直接修改</p>
+</section>
+
+<section id="guestbook">
+<h2>留言區 — 歡迎公眾留言 (Unlimited)</h2>
+<div class="guest-form">
+<input id="guestName" placeholder="您的名字 / Your name">
+<input id="guestMsg" placeholder="寫低您嘅感受..." style="flex:2">
+<button class="small primary" onclick="addGuest()" style="padding:6px 12px;background:var(--brown);color:#fff;border:none;border-radius:6px;cursor:pointer">發表</button>
+</div>
+<div id="guestList"></div>
+<p style="font-size:10px;opacity:0.5;margin-top:8px">留言可放無限條，支援中英文，瀏覽器本地儲存</p>
+</section>
+
+<button id="adminBtn" onclick="toggleAdmin()">🔒 小管家 INDEX 27 全權限</button>
+<div class="overlay" id="ov" onclick="toggleAdmin()"></div>
+
+<div id="adminPanel">
+<button class="small" style="float:right" onclick="toggleAdmin()">✕ 關閉</button>
+<h2>小管家 INDEX 27 - 全權限開放</h2>
+<p style="font-size:10px;opacity:0.7;margin-bottom:8px">你話之前版面唔見、contact冇咗，今次全部還原+開放所有編輯權限。Chrome顯示 Index (27).html 係下載次數，唔係版本號。</p>
+
+<h3>1. 改序言 (可中英文)</h3>
+<textarea id="adminPreface" rows="10"></textarea>
+<div class="row"><button class="small primary" onclick="savePreface()">儲存序言</button><button class="small" onclick="resetPreface()">還原預設</button></div>
+
+<h3>2. 改聯絡資料 Contact</h3>
+<textarea id="adminContact" rows="4"></textarea>
+<div class="row"><button class="small primary" onclick="saveContact()">儲存聯絡</button></div>
+
+<h3>3. 改畫 - 標題/分類/副主題/感言/旋轉 (開放全部)</h3>
+<input id="searchPaint" placeholder="搜 ID 如 115, 007, 山水" oninput="renderAdminList()">
+<div id="adminList" style="max-height:380px;overflow:auto;border:1px solid #eee;padding:6px;border-radius:6px"></div>
+
+<h3>4. 加新畫 / 刪畫</h3>
+<div class="row"><input id="newId" placeholder="ID 如 212"><input id="newTitle" placeholder="標題 如 熊貓"></div>
+<div class="row"><select id="newCat"><option>山水</option><option>花鳥</option><option>人物</option></select><input id="newSub" placeholder="副主題(可留空)"></div>
+<textarea id="newNote" rows="2" placeholder="感言(可留空)"></textarea>
+<div class="row"><button class="small primary" onclick="addPainting()">加入/覆蓋</button><button class="small" onclick="deletePainting()" style="background:#fee">刪除此ID</button></div>
+
+<h3>5. 匯出 / 上傳</h3>
+<button class="small primary" onclick="exportHTML()">下載 index.html (INDEX 27)</button>
+<button class="small" onclick="exportCSV()">匯出CSV清單</button>
+<p style="font-size:10px;margin-top:6px">改完按「下載 index.html」，去 GitHub wendy-gallery 按 Upload files 覆蓋。只upload index.html就得，唔使加圖片 (除非118.jpg未上傳)。</p>
+
+<h3>6. 留言管理</h3>
+<button class="small" onclick="clearGuests()">清空公眾留言</button>
+<button class="small" onclick="exportGuests()">匯出留言備份</button>
+
+<h3>7. 旋轉說明</h3>
+<p style="font-size:11px;line-height:1.6">山水115月亮應在上，花鳥7,8花向上40扇柄向下，人物2,7頭向上。仍倒轉可用旋轉按鈕：↻90° 順時針，↺90° 逆時針，180°上下倒轉，重置還原。轉完會自動儲存。</p>
+</div>
+
+<script>
+const defaultPreface = `畢業於香港養和護士學校，曾在香港養和、港中及仁安私家醫院工作多年，期後任職於澳門科技大學醫院擔任總護士長一職，及後到中國河北石家庄婦幼醫院擔任醫院副院長及總護士長。終於結束醫院生涯。
+
+於2008年至2011年間為香港兩間安老院同時擔任兩院副院長。
+
+2012至2015年在香港擔任香港乳癌基金會服務總監。
+
+其後曾分別任職中、西醫療集團營運總監一職。
+
+2019年開始為全球華人乳癌組織聯盟之服務總監。亦同時兼任香港品質保證局評審員及恩耆頤養院顧問。
+
+多年來從護士到醫療管理，營營役役，奔走於醫療工作。慢慢開始為自己制定每年目標，或計劃每年參與兩個興趣活動，去1-2個國家旅行。
+
+年尾檢討目標是否已達成，年頭再設新目標。如是已推行多年計劃。
+
+直到現在人生已達收成期，也可以為自己而活得更精采，到目前為止，興趣還不少：打golf，上古箏，中樂，另外就是畫畫了。
+
+朋友經常會讚我有藝術天份，其實我更相信是自己多年來未停過向前邁進，努力與堅持令我由一個小小護士做到總護士長及醫院副院長，也見證自己無論在古箏、中樂及畫畫方面都有進步。最開心的是老師的讚賞，功夫沒有白費，但真正可以留下作記念的只有畫作，這幾年在構思自製一本畫册記錄畫畫歷程，但今日科技發展千里，讓我盟生製作自己網頁儲存作品，既有此想法，在詢問很多朋友仍未學到如何製作網站，終於親自上了一個「自製網站不求人」，開始慢慢將心血放入這網站，感覺一生不枉過。
+
+也希望我的後人像我一樣永不放棄，活得精彩。
+
+========================================
+
+Foreword — From Healthcare Professional to Amateur Painter
+
+A graduate of the Hong Kong Sanatorium & Hospital School of Nursing, I spent many years working at private hospitals in Hong Kong—including Hong Kong Sanatorium & Hospital, Hong Kong Central Hospital, and Union Hospital.
+
+Subsequently, I served as Nursing Director at the Macau University of Science and Technology Hospital, followed by a role as Deputy Hospital Director and Chief Nursing Officer at Shijiazhuang Maternal and Child Health Hospital in Hebei, China. Eventually, I concluded my career in hospital administration.
+
+From 2008 to 2011, I served concurrently as the Deputy Director of two elderly care homes in Hong Kong.
+
+From 2012 to 2015, I held the position of Service Director at the Hong Kong Breast Cancer Foundation.
+
+Subsequently, I served as the Operations Director for both Traditional Chinese Medicine and Western medicine healthcare groups.
+
+Since 2019, I had held the position of Service Director for the Global Chinese Breast Cancer Organizations Alliance. Concurrently, I also serve as an assessor for the Hong Kong Quality Assurance Agency and as a consultant for Yan Kei Elderly Care Home.
+
+Having spent years dedicated to a demanding career—transitioning from nursing to healthcare management—I gradually began setting annual personal goals, such as participating in two hobby-related activities and traveling to one or two countries each year.
+
+I review the achievement of these goals at the end of the year and sets new ones at the start of the next—this seems like a habit that I have maintained for many years.
+
+Now that I have reached the harvest years of my life, I can live more vibrantly for myself. I have a wide range of interests: playing golf, learning the guzheng, engaging with traditional Chinese music, and painting.
+
+Friends often compliment me on my artistic talent; however, I attribute my achievements more to my relentless drive to move forward. Hard work and perseverance propelled me from a staff nurse to a Chief Nursing Officer and Deputy Hospital Director, and I have also witnessed my own progress in the guzheng, traditional Chinese music, and painting. While I cherish the praise from my teachers—proof that my efforts were not in vain—it is my paintings that serve as lasting mementos.
+
+For years, I had envisioned creating an album to document my artistic journey. With the rapid advancement of technology, the idea of building my own website to showcase my work took root. After consulting many friends without successfully learning how to build a site, I finally took a "DIY Website Creation" course myself. As I gradually pour my heart and soul into this website, I feel that my life has been truly fulfilling.
+
+I also hope that my descendants will, like me, never give up and will live their lives to the fullest.
+
+Wendy Fung`;
+const defaultContact = `📧 電郵：wendyycfung@gmail.com
+📱 電話/whatsApp：+852-92552153
+📍 wechat: wendyfung
+Facebook: Fung Wendy`;
+let paintings = [{"id": "001", "title": "明月松間照·清泉石上流", "category": "山水", "catIndex": 1, "rotate": 0, "sub": "", "note": "", "originalNote": ""}, {"id": "002", "title": "雲濤祥峰·蒼松立崖", "category": "山水", "catIndex": 2, "rotate": 0, "sub": "", "note": "", "originalNote": ""}, {"id": "003", "title": "月夜聽濤·心隨潮轉", "category": "山水", "catIndex": 3, "rotate": 0, "sub": "", "note": "", "originalNote": ""}, {"id": "004", "title": "作品 004", "category": "花鳥", "catIndex": 1, "rotate": 0, "sub": "", "note": "", "originalNote": ""}, {"id": "005", "title": "作品 005", "category": "花鳥", "catIndex": 2, "rotate": 0, "sub": "", "note": "", "originalNote": ""}, {"id": "006", "title": "作品 006", "category": "花鳥", "catIndex": 3, "rotate": 0, "sub": "", "note": "", "originalNote": ""}, {"id": "007", "title": "作品 007", "category": "花鳥", "catIndex": 4, "rotate": 0, "sub": "", "note": "", "originalNote": ""}, {"id": "008", "title": "作品 008", "category": "花鳥", "catIndex": 5, "rotate": 0, "sub": "", "note": "", "originalNote": ""}, {"id": "009", "title": "作品 009", "category": "花鳥", "catIndex": 6, "rotate": 0, "sub": "", "note": "", "originalNote": ""}, {"id": "010", "title": "作品 010", "category": "花鳥", "catIndex": 7, "rotate": 180, "sub": "", "note": "", "originalNote": ""}, {"id": "011", "title": "作品 011", "category": "花鳥", "catIndex": 8, "rotate": 180, "sub": "", "note": "", "originalNote": ""}, {"id": "012", "title": "作品 012", "category": "花鳥", "catIndex": 9, "rotate": 0, "sub": "", "note": "", "originalNote": ""}, {"id": "013", "title": "作品 013", "category": "花鳥", "catIndex": 10, "rotate": 0, "sub": "", "note": "", "originalNote": ""}, {"id": "014", "title": "作品 014", "category": "花鳥", "catIndex": 11, "rotate": 0, "sub": "", "note": "", "originalNote": ""}, {"id": "015", "title": "作品 015", "category": "花鳥", "catIndex": 12, "rotate": 0, "sub": "", "note": "", "originalNote": ""}, {"id": "016", "title": "作品 016", "category": "花鳥", "catIndex": 13, "rotate": 0, "sub": "", "note": "", "originalNote": ""}, {"id": "017", "title": "作品 017", "category": "花鳥", "catIndex": 14, "rotate": 0, "sub": "", "note": "", "originalNote": ""}, {"id": "018", "title": "作品 018", "category": "花鳥", "catIndex": 15, "rotate": 0, "sub": "", "note": "", "originalNote": ""}, {"id": "019", "title": "作品 019", "category": "花鳥", "catIndex": 16, "rotate": 0, "sub": "", "note": "", "originalNote": ""}, {"id": "020", "title": "作品 020", "category": "花鳥", "catIndex": 17, "rotate": 0, "sub": "", "note": "", "originalNote": ""}, {"id": "021", "title": "作品 021", "category": "花鳥", "catIndex": 18, "rotate": 0, "sub": "", "note": "", "originalNote": ""}, {"id": "022", "title": "作品 022", "category": "花鳥", "catIndex": 19, "rotate": 0, "sub": "", "note": "", "originalNote": ""}, {"id": "023", "title": "作品 023", "category": "花鳥", "catIndex": 20, "rotate": 0, "sub": "", "note": "", "originalNote": ""}, {"id": "024", "title": "作品 024", "category": "花鳥", "catIndex": 21, "rotate": 180, "sub": "", "note": "", "originalNote": ""}, {"id": "025", "title": "作品 025", "category": "花鳥", "catIndex": 22, "rotate": 0, "sub": "", "note": "", "originalNote": ""}, {"id": "026", "title": "作品 026", "category": "花鳥", "catIndex": 23, "rotate": 0, "sub": "", "note": "", "originalNote": ""}, {"id": "027", "title": "作品 027", "category": "花鳥", "catIndex": 24, "rotate": 0, "sub": "", "note": "", "originalNote": ""}, {"id": "029", "title": "作品 029", "category": "花鳥", "catIndex": 25, "rotate": 0, "sub": "", "note": "", "originalNote": ""}, {"id": "030", "title": "作品 030", "category": "花鳥", "catIndex": 26, "rotate": 0, "sub": "", "note": "", "originalNote": ""}, {"id": "031", "title": "作品 031", "category": "花鳥", "catIndex": 27, "rotate": 0, "sub": "", "note": "", "originalNote": ""}, {"id": "032", "title": "作品 032", "category": "花鳥", "catIndex": 28, "rotate": 0, "sub": "", "note": "", "originalNote": ""}, {"id": "033", "title": "作品 033", "category": "花鳥", "catIndex": 29, "rotate": 0, "sub": "", "note": "", "originalNote": ""}, {"id": "034", "title": "作品 034", "category": "花鳥", "catIndex": 30, "rotate": 0, "sub": "", "note": "", "originalNote": ""}, {"id": "035", "title": "作品 035", "category": "花鳥", "catIndex": 31, "rotate": 0, "sub": "", "note": "", "originalNote": ""}, {"id": "036", "title": "作品 036", "category": "花鳥", "catIndex": 32, "rotate": 0, "sub": "", "note": "", "originalNote": ""}, {"id": "037", "title": "作品 037", "category": "花鳥", "catIndex": 33, "rotate": 0, "sub": "", "note": "", "originalNote": ""}, {"id": "038", "title": "作品 038", "category": "花鳥", "catIndex": 34, "rotate": 0, "sub": "", "note": "", "originalNote": ""}, {"id": "039", "title": "作品 039", "category": "花鳥", "catIndex": 35, "rotate": 0, "sub": "", "note": "", "originalNote": ""}, {"id": "040", "title": "作品 040", "category": "山水", "catIndex": 4, "rotate": 0, "sub": "", "note": "", "originalNote": ""}, {"id": "041", "title": "作品 041", "category": "山水", "catIndex": 5, "rotate": 0, "sub": "", "note": "", "originalNote": ""}, {"id": "042", "title": "作品 042", "category": "山水", "catIndex": 6, "rotate": 0, "sub": "", "note": "", "originalNote": ""}, {"id": "043", "title": "作品 043", "category": "山水", "catIndex": 7, "rotate": 0, "sub": "", "note": "", "originalNote": ""}, {"id": "044", "title": "作品 044", "category": "花鳥", "catIndex": 36, "rotate": 0, "sub": "", "note": "", "originalNote": ""}, {"id": "045", "title": "作品 045", "category": "山水", "catIndex": 8, "rotate": 0, "sub": "", "note": "", "originalNote": ""}, {"id": "046", "title": "作品 046", "category": "山水", "catIndex": 9, "rotate": 0, "sub": "", "note": "", "originalNote": ""}, {"id": "047", "title": "作品 047", "category": "山水", "catIndex": 10, "rotate": 0, "sub": "", "note": "", "originalNote": ""}, {"id": "048", "title": "作品 048", "category": "山水", "catIndex": 11, "rotate": 0, "sub": "", "note": "", "originalNote": ""}, {"id": "049", "title": "作品 049", "category": "山水", "catIndex": 12, "rotate": 0, "sub": "", "note": "", "originalNote": ""}, {"id": "050", "title": "作品 050", "category": "山水", "catIndex": 13, "rotate": 0, "sub": "", "note": "", "originalNote": ""}, {"id": "051", "title": "作品 051", "category": "山水", "catIndex": 14, "rotate": 0, "sub": "", "note": "", "originalNote": ""}, {"id": "052", "title": "作品 052", "category": "山水", "catIndex": 15, "rotate": 0, "sub": "", "note": "", "originalNote": ""}, {"id": "053", "title": "作品 053", "category": "山水", "catIndex": 16, "rotate": 0, "sub": "", "note": "", "originalNote": ""}, {"id": "054", "title": "作品 054", "category": "山水", "catIndex": 17, "rotate": 0, "sub": "", "note": "", "originalNote": ""}, {"id": "055", "title": "作品 055", "category": "山水", "catIndex": 18, "rotate": 0, "sub": "", "note": "", "originalNote": ""}, {"id": "056", "title": "作品 056", "category": "山水", "catIndex": 19, "rotate": 0, "sub": "", "note": "", "originalNote": ""}, {"id": "057", "title": "作品 057", "category": "山水", "catIndex": 20, "rotate": 0, "sub": "", "note": "", "originalNote": ""}, {"id": "058", "title": "作品 058", "category": "山水", "catIndex": 21, "rotate": 0, "sub": "", "note": "", "originalNote": ""}, {"id": "059", "title": "作品 059", "category": "山水", "catIndex": 22, "rotate": 0, "sub": "", "note": "", "originalNote": ""}, {"id": "060", "title": "作品 060", "category": "山水", "catIndex": 23, "rotate": 0, "sub": "", "note": "", "originalNote": ""}, {"id": "061", "title": "作品 061", "category": "山水", "catIndex": 24, "rotate": 0, "sub": "", "note": "", "originalNote": ""}, {"id": "062", "title": "作品 062", "category": "山水", "catIndex": 25, "rotate": 0, "sub": "", "note": "", "originalNote": ""}, {"id": "063", "title": "煙雨江南·朦朧詩意", "category": "山水", "catIndex": 26, "rotate": 0, "sub": "", "note": "", "originalNote": ""}, {"id": "064", "title": "作品 064", "category": "花鳥", "catIndex": 37, "rotate": 0, "sub": "", "note": "", "originalNote": ""}, {"id": "065", "title": "作品 065", "category": "花鳥", "catIndex": 38, "rotate": 0, "sub": "", "note": "", "originalNote": ""}, {"id": "066", "title": "作品 066", "category": "花鳥", "catIndex": 39, "rotate": 0, "sub": "", "note": "", "originalNote": ""}, {"id": "067", "title": "作品 067", "category": "人物", "catIndex": 1, "rotate": 0, "sub": "", "note": "", "originalNote": ""}, {"id": "068", "title": "作品 068", "category": "人物", "catIndex": 2, "rotate": 180, "sub": "", "note": "", "originalNote": ""}, {"id": "069", "title": "作品 069", "category": "人物", "catIndex": 3, "rotate": 0, "sub": "", "note": "", "originalNote": ""}, {"id": "070", "title": "作品 070", "category": "人物", "catIndex": 4, "rotate": 0, "sub": "", "note": "", "originalNote": ""}, {"id": "071", "title": "作品 071", "category": "人物", "catIndex": 5, "rotate": 0, "sub": "", "note": "", "originalNote": ""}, {"id": "072", "title": "作品 072", "category": "人物", "catIndex": 6, "rotate": 0, "sub": "", "note": "", "originalNote": ""}, {"id": "073", "title": "作品 073", "category": "山水", "catIndex": 27, "rotate": 0, "sub": "", "note": "", "originalNote": ""}, {"id": "074", "title": "作品 074", "category": "人物", "catIndex": 7, "rotate": 180, "sub": "", "note": "", "originalNote": ""}, {"id": "075", "title": "作品 075", "category": "人物", "catIndex": 8, "rotate": 0, "sub": "", "note": "", "originalNote": ""}, {"id": "076", "title": "作品 076", "category": "花鳥", "catIndex": 40, "rotate": 0, "sub": "", "note": "", "originalNote": ""}, {"id": "077", "title": "作品 077", "category": "山水", "catIndex": 28, "rotate": 0, "sub": "", "note": "", "originalNote": ""}, {"id": "078", "title": "作品 078", "category": "山水", "catIndex": 29, "rotate": 0, "sub": "", "note": "", "originalNote": ""}, {"id": "079", "title": "作品 079", "category": "山水", "catIndex": 30, "rotate": 0, "sub": "", "note": "", "originalNote": ""}, {"id": "080", "title": "作品 080", "category": "花鳥", "catIndex": 41, "rotate": 0, "sub": "", "note": "", "originalNote": ""}, {"id": "081", "title": "作品 081", "category": "人物", "catIndex": 9, "rotate": 0, "sub": "", "note": "", "originalNote": ""}, {"id": "082", "title": "作品 082", "category": "花鳥", "catIndex": 42, "rotate": 0, "sub": "", "note": "", "originalNote": ""}, {"id": "083", "title": "作品 083", "category": "花鳥", "catIndex": 43, "rotate": 0, "sub": "", "note": "", "originalNote": ""}, {"id": "084", "title": "作品 084", "category": "花鳥", "catIndex": 44, "rotate": 0, "sub": "", "note": "", "originalNote": ""}, {"id": "085", "title": "作品 085", "category": "花鳥", "catIndex": 45, "rotate": 0, "sub": "", "note": "", "originalNote": ""}, {"id": "086", "title": "作品 086", "category": "花鳥", "catIndex": 46, "rotate": 0, "sub": "", "note": "", "originalNote": ""}, {"id": "087", "title": "作品 087", "category": "花鳥", "catIndex": 47, "rotate": 0, "sub": "", "note": "", "originalNote": ""}, {"id": "088", "title": "作品 088", "category": "花鳥", "catIndex": 48, "rotate": 0, "sub": "", "note": "", "originalNote": ""}, {"id": "089", "title": "作品 089", "category": "花鳥", "catIndex": 49, "rotate": 0, "sub": "", "note": "", "originalNote": ""}, {"id": "090", "title": "作品 090", "category": "花鳥", "catIndex": 50, "rotate": 0, "sub": "", "note": "", "originalNote": ""}, {"id": "091", "title": "作品 091", "category": "山水", "catIndex": 31, "rotate": 0, "sub": "", "note": "", "originalNote": ""}, {"id": "092", "title": "作品 092", "category": "花鳥", "catIndex": 51, "rotate": 0, "sub": "", "note": "", "originalNote": ""}, {"id": "093", "title": "作品 093", "category": "花鳥", "catIndex": 52, "rotate": 0, "sub": "", "note": "", "originalNote": ""}, {"id": "094", "title": "作品 094", "category": "山水", "catIndex": 32, "rotate": 0, "sub": "", "note": "", "originalNote": ""}, {"id": "095", "title": "作品 095", "category": "花鳥", "catIndex": 53, "rotate": 0, "sub": "", "note": "", "originalNote": ""}, {"id": "096", "title": "作品 096", "category": "山水", "catIndex": 33, "rotate": 0, "sub": "", "note": "", "originalNote": ""}, {"id": "097", "title": "作品 097", "category": "山水", "catIndex": 34, "rotate": 0, "sub": "", "note": "", "originalNote": ""}, {"id": "098", "title": "作品 098", "category": "花鳥", "catIndex": 54, "rotate": 0, "sub": "", "note": "", "originalNote": ""}, {"id": "099", "title": "作品 099", "category": "花鳥", "catIndex": 55, "rotate": 0, "sub": "", "note": "", "originalNote": ""}, {"id": "100", "title": "作品 100", "category": "山水", "catIndex": 35, "rotate": 0, "sub": "", "note": "", "originalNote": ""}, {"id": "101", "title": "作品 101", "category": "山水", "catIndex": 36, "rotate": 0, "sub": "", "note": "", "originalNote": ""}, {"id": "102", "title": "作品 102", "category": "花鳥", "catIndex": 56, "rotate": 0, "sub": "", "note": "", "originalNote": ""}, {"id": "103", "title": "作品 103", "category": "花鳥", "catIndex": 57, "rotate": 0, "sub": "", "note": "", "originalNote": ""}, {"id": "104", "title": "作品 104", "category": "花鳥", "catIndex": 58, "rotate": 0, "sub": "", "note": "", "originalNote": ""}, {"id": "105", "title": "作品 105", "category": "山水", "catIndex": 37, "rotate": 0, "sub": "", "note": "", "originalNote": ""}, {"id": "106", "title": "作品 106", "category": "山水", "catIndex": 38, "rotate": 0, "sub": "", "note": "", "originalNote": ""}, {"id": "107", "title": "作品 107", "category": "山水", "catIndex": 39, "rotate": 0, "sub": "", "note": "", "originalNote": ""}, {"id": "108", "title": "作品 108", "category": "花鳥", "catIndex": 59, "rotate": 0, "sub": "", "note": "", "originalNote": ""}, {"id": "109", "title": "作品 109", "category": "山水", "catIndex": 40, "rotate": 0, "sub": "", "note": "", "originalNote": ""}, {"id": "110", "title": "作品 110", "category": "山水", "catIndex": 41, "rotate": 0, "sub": "", "note": "", "originalNote": ""}, {"id": "111", "title": "作品 111", "category": "花鳥", "catIndex": 60, "rotate": 0, "sub": "", "note": "", "originalNote": ""}, {"id": "112", "title": "作品 112", "category": "山水", "catIndex": 42, "rotate": 0, "sub": "", "note": "", "originalNote": ""}, {"id": "113", "title": "作品 113", "category": "山水", "catIndex": 43, "rotate": 0, "sub": "", "note": "", "originalNote": ""}, {"id": "114", "title": "作品 114", "category": "山水", "catIndex": 44, "rotate": 0, "sub": "", "note": "", "originalNote": ""}, {"id": "115", "title": "作品 115", "category": "山水", "catIndex": 45, "rotate": 0, "sub": "", "note": "", "originalNote": ""}, {"id": "116", "title": "作品 116", "category": "山水", "catIndex": 46, "rotate": 0, "sub": "", "note": "", "originalNote": ""}, {"id": "117", "title": "作品 117", "category": "人物", "catIndex": 10, "rotate": 0, "sub": "", "note": "", "originalNote": ""}, {"id": "118", "title": "作品 118", "category": "山水", "catIndex": 47, "rotate": 0, "sub": "", "note": "", "originalNote": ""}, {"id": "119", "title": "熊貓 · 作品 119", "category": "人物", "catIndex": 11, "rotate": 0, "sub": "", "note": "", "originalNote": ""}, {"id": "120", "title": "作品 120", "category": "人物", "catIndex": 12, "rotate": 0, "sub": "", "note": "", "originalNote": ""}, {"id": "121", "title": "作品 121", "category": "花鳥", "catIndex": 61, "rotate": 0, "sub": "", "note": "", "originalNote": ""}, {"id": "122", "title": "作品 122", "category": "人物", "catIndex": 13, "rotate": 0, "sub": "", "note": "", "originalNote": ""}, {"id": "123", "title": "作品 123", "category": "花鳥", "catIndex": 62, "rotate": 0, "sub": "", "note": "", "originalNote": ""}, {"id": "124", "title": "作品 124", "category": "花鳥", "catIndex": 63, "rotate": 0, "sub": "", "note": "", "originalNote": ""}, {"id": "125", "title": "作品 125", "category": "花鳥", "catIndex": 64, "rotate": 0, "sub": "", "note": "", "originalNote": ""}, {"id": "126", "title": "作品 126", "category": "山水", "catIndex": 48, "rotate": 0, "sub": "", "note": "", "originalNote": ""}, {"id": "127", "title": "作品 127", "category": "山水", "catIndex": 49, "rotate": 0, "sub": "", "note": "", "originalNote": ""}, {"id": "128", "title": "作品 128", "category": "山水", "catIndex": 50, "rotate": 0, "sub": "", "note": "", "originalNote": ""}, {"id": "129", "title": "作品 129", "category": "山水", "catIndex": 51, "rotate": 0, "sub": "", "note": "", "originalNote": ""}, {"id": "130", "title": "作品 130", "category": "山水", "catIndex": 52, "rotate": 0, "sub": "", "note": "", "originalNote": ""}, {"id": "131", "title": "作品 131", "category": "山水", "catIndex": 53, "rotate": 0, "sub": "", "note": "", "originalNote": ""}, {"id": "132", "title": "作品 132", "category": "山水", "catIndex": 54, "rotate": 0, "sub": "", "note": "", "originalNote": ""}, {"id": "133", "title": "作品 133", "category": "山水", "catIndex": 55, "rotate": 0, "sub": "", "note": "", "originalNote": ""}, {"id": "134", "title": "作品 134", "category": "山水", "catIndex": 56, "rotate": 0, "sub": "", "note": "", "originalNote": ""}, {"id": "135", "title": "作品 135", "category": "山水", "catIndex": 57, "rotate": 0, "sub": "", "note": "", "originalNote": ""}, {"id": "136", "title": "作品 136", "category": "山水", "catIndex": 58, "rotate": 0, "sub": "", "note": "", "originalNote": ""}, {"id": "137", "title": "作品 137", "category": "山水", "catIndex": 59, "rotate": 0, "sub": "", "note": "", "originalNote": ""}, {"id": "138", "title": "作品 138", "category": "山水", "catIndex": 60, "rotate": 0, "sub": "", "note": "", "originalNote": ""}, {"id": "139", "title": "作品 139", "category": "山水", "catIndex": 61, "rotate": 0, "sub": "", "note": "", "originalNote": ""}, {"id": "140", "title": "作品 140", "category": "山水", "catIndex": 62, "rotate": 0, "sub": "", "note": "", "originalNote": ""}, {"id": "141", "title": "作品 141", "category": "山水", "catIndex": 63, "rotate": 0, "sub": "", "note": "", "originalNote": ""}, {"id": "142", "title": "作品 142", "category": "山水", "catIndex": 64, "rotate": 0, "sub": "", "note": "", "originalNote": ""}, {"id": "143", "title": "作品 143", "category": "山水", "catIndex": 65, "rotate": 0, "sub": "", "note": "", "originalNote": ""}, {"id": "144", "title": "作品 144", "category": "山水", "catIndex": 66, "rotate": 0, "sub": "", "note": "", "originalNote": ""}, {"id": "145", "title": "作品 145", "category": "山水", "catIndex": 67, "rotate": 0, "sub": "", "note": "", "originalNote": ""}, {"id": "146", "title": "作品 146", "category": "山水", "catIndex": 68, "rotate": 0, "sub": "", "note": "", "originalNote": ""}, {"id": "147", "title": "作品 147", "category": "山水", "catIndex": 69, "rotate": 0, "sub": "", "note": "", "originalNote": ""}, {"id": "148", "title": "作品 148", "category": "山水", "catIndex": 70, "rotate": 0, "sub": "", "note": "", "originalNote": ""}, {"id": "149", "title": "作品 149", "category": "山水", "catIndex": 71, "rotate": 0, "sub": "", "note": "", "originalNote": ""}, {"id": "150", "title": "作品 150", "category": "山水", "catIndex": 72, "rotate": 0, "sub": "", "note": "", "originalNote": ""}, {"id": "151", "title": "作品 151", "category": "花鳥", "catIndex": 65, "rotate": 0, "sub": "", "note": "", "originalNote": ""}, {"id": "152", "title": "作品 152", "category": "山水", "catIndex": 73, "rotate": 0, "sub": "", "note": "", "originalNote": ""}, {"id": "153", "title": "作品 153", "category": "山水", "catIndex": 74, "rotate": 0, "sub": "", "note": "", "originalNote": ""}, {"id": "154", "title": "作品 154", "category": "山水", "catIndex": 75, "rotate": 0, "sub": "", "note": "", "originalNote": ""}, {"id": "155", "title": "作品 155", "category": "山水", "catIndex": 76, "rotate": 0, "sub": "", "note": "", "originalNote": ""}, {"id": "156", "title": "作品 156", "category": "山水", "catIndex": 77, "rotate": 0, "sub": "", "note": "", "originalNote": ""}, {"id": "157", "title": "作品 157", "category": "花鳥", "catIndex": 66, "rotate": 0, "sub": "", "note": "", "originalNote": ""}, {"id": "158", "title": "作品 158", "category": "山水", "catIndex": 78, "rotate": 0, "sub": "", "note": "", "originalNote": ""}, {"id": "159", "title": "作品 159", "category": "花鳥", "catIndex": 67, "rotate": 0, "sub": "", "note": "", "originalNote": ""}, {"id": "160", "title": "作品 160", "category": "花鳥", "catIndex": 68, "rotate": 0, "sub": "", "note": "", "originalNote": ""}, {"id": "161", "title": "作品 161", "category": "山水", "catIndex": 79, "rotate": 0, "sub": "", "note": "", "originalNote": ""}, {"id": "162", "title": "作品 162", "category": "山水", "catIndex": 80, "rotate": 0, "sub": "", "note": "", "originalNote": ""}, {"id": "163", "title": "作品 163", "category": "山水", "catIndex": 81, "rotate": 0, "sub": "", "note": "", "originalNote": ""}, {"id": "164", "title": "作品 164", "category": "山水", "catIndex": 82, "rotate": 0, "sub": "", "note": "", "originalNote": ""}, {"id": "165", "title": "作品 165", "category": "山水", "catIndex": 83, "rotate": 0, "sub": "", "note": "", "originalNote": ""}, {"id": "166", "title": "作品 166", "category": "山水", "catIndex": 84, "rotate": 0, "sub": "", "note": "", "originalNote": ""}, {"id": "167", "title": "作品 167", "category": "花鳥", "catIndex": 69, "rotate": 0, "sub": "", "note": "", "originalNote": ""}, {"id": "168", "title": "作品 168", "category": "山水", "catIndex": 85, "rotate": 0, "sub": "", "note": "", "originalNote": ""}, {"id": "169", "title": "作品 169", "category": "花鳥", "catIndex": 70, "rotate": 0, "sub": "", "note": "", "originalNote": ""}, {"id": "170", "title": "作品 170", "category": "山水", "catIndex": 86, "rotate": 0, "sub": "", "note": "", "originalNote": ""}, {"id": "172", "title": "作品 172", "category": "山水", "catIndex": 87, "rotate": 0, "sub": "", "note": "", "originalNote": ""}, {"id": "173", "title": "作品 173", "category": "山水", "catIndex": 88, "rotate": 0, "sub": "", "note": "", "originalNote": ""}, {"id": "174", "title": "作品 174", "category": "人物", "catIndex": 14, "rotate": 0, "sub": "", "note": "", "originalNote": ""}, {"id": "175", "title": "作品 175", "category": "山水", "catIndex": 89, "rotate": 0, "sub": "", "note": "", "originalNote": ""}, {"id": "176", "title": "作品 176", "category": "山水", "catIndex": 90, "rotate": 0, "sub": "", "note": "", "originalNote": ""}, {"id": "177", "title": "作品 177", "category": "山水", "catIndex": 91, "rotate": 0, "sub": "", "note": "", "originalNote": ""}, {"id": "178", "title": "作品 178", "category": "山水", "catIndex": 92, "rotate": 0, "sub": "", "note": "", "originalNote": ""}, {"id": "180", "title": "作品 180", "category": "山水", "catIndex": 93, "rotate": 0, "sub": "", "note": "", "originalNote": ""}, {"id": "181", "title": "作品 181", "category": "山水", "catIndex": 94, "rotate": 0, "sub": "", "note": "", "originalNote": ""}, {"id": "183", "title": "作品 183", "category": "山水", "catIndex": 95, "rotate": 0, "sub": "", "note": "", "originalNote": ""}, {"id": "184", "title": "作品 184", "category": "山水", "catIndex": 96, "rotate": 0, "sub": "", "note": "", "originalNote": ""}, {"id": "185", "title": "作品 185", "category": "山水", "catIndex": 97, "rotate": 0, "sub": "", "note": "", "originalNote": ""}, {"id": "186", "title": "作品 186", "category": "花鳥", "catIndex": 71, "rotate": 0, "sub": "", "note": "", "originalNote": ""}, {"id": "187", "title": "作品 187", "category": "山水", "catIndex": 98, "rotate": 0, "sub": "", "note": "", "originalNote": ""}, {"id": "188", "title": "作品 188", "category": "山水", "catIndex": 99, "rotate": 0, "sub": "", "note": "", "originalNote": ""}, {"id": "189", "title": "作品 189", "category": "人物", "catIndex": 15, "rotate": 0, "sub": "", "note": "", "originalNote": ""}, {"id": "190", "title": "作品 190", "category": "人物", "catIndex": 16, "rotate": 0, "sub": "", "note": "", "originalNote": ""}, {"id": "191", "title": "作品 191", "category": "花鳥", "catIndex": 72, "rotate": 0, "sub": "", "note": "", "originalNote": ""}, {"id": "192", "title": "作品 192", "category": "花鳥", "catIndex": 73, "rotate": 0, "sub": "", "note": "", "originalNote": ""}, {"id": "193", "title": "作品 193", "category": "山水", "catIndex": 100, "rotate": 0, "sub": "", "note": "", "originalNote": ""}, {"id": "194", "title": "作品 194", "category": "山水", "catIndex": 101, "rotate": 0, "sub": "", "note": "", "originalNote": ""}, {"id": "195", "title": "作品 195", "category": "花鳥", "catIndex": 74, "rotate": 0, "sub": "", "note": "", "originalNote": ""}, {"id": "196", "title": "作品 196", "category": "山水", "catIndex": 102, "rotate": 0, "sub": "", "note": "", "originalNote": ""}, {"id": "197", "title": "作品 197", "category": "山水", "catIndex": 103, "rotate": 0, "sub": "", "note": "", "originalNote": ""}, {"id": "198", "title": "作品 198", "category": "山水", "catIndex": 104, "rotate": 0, "sub": "", "note": "", "originalNote": ""}, {"id": "199", "title": "作品 199", "category": "山水", "catIndex": 105, "rotate": 0, "sub": "", "note": "", "originalNote": ""}, {"id": "200", "title": "作品 200", "category": "山水", "catIndex": 106, "rotate": 0, "sub": "", "note": "", "originalNote": ""}, {"id": "201", "title": "作品 201", "category": "山水", "catIndex": 107, "rotate": 0, "sub": "", "note": "", "originalNote": ""}, {"id": "202", "title": "作品 202", "category": "山水", "catIndex": 108, "rotate": 0, "sub": "", "note": "", "originalNote": ""}, {"id": "203", "title": "作品 203", "category": "山水", "catIndex": 109, "rotate": 0, "sub": "", "note": "", "originalNote": ""}, {"id": "204", "title": "作品 204", "category": "山水", "catIndex": 110, "rotate": 0, "sub": "", "note": "", "originalNote": ""}, {"id": "205", "title": "作品 205", "category": "山水", "catIndex": 111, "rotate": 0, "sub": "", "note": "", "originalNote": ""}, {"id": "206", "title": "作品 206", "category": "山水", "catIndex": 112, "rotate": 0, "sub": "", "note": "", "originalNote": ""}, {"id": "207", "title": "作品 207", "category": "山水", "catIndex": 113, "rotate": 0, "sub": "", "note": "", "originalNote": ""}, {"id": "208", "title": "作品 208", "category": "山水", "catIndex": 114, "rotate": 0, "sub": "", "note": "", "originalNote": ""}, {"id": "209", "title": "作品 209", "category": "山水", "catIndex": 115, "rotate": 180, "sub": "", "note": "", "originalNote": ""}, {"id": "210", "title": "作品 210", "category": "花鳥", "catIndex": 75, "rotate": 0, "sub": "", "note": "", "originalNote": ""}, {"id": "211", "title": "作品 211", "category": "花鳥", "catIndex": 76, "rotate": 0, "sub": "", "note": "", "originalNote": ""}, {"id": "212", "title": "作品 212", "category": "花鳥", "catIndex": 77, "rotate": 0, "sub": "", "note": "", "originalNote": ""}, {"id": "213", "title": "作品 213", "category": "山水", "catIndex": 116, "rotate": 0, "sub": "", "note": "", "originalNote": ""}, {"id": "215", "title": "作品 215", "category": "花鳥", "catIndex": 78, "rotate": 0, "sub": "", "note": "", "originalNote": ""}];
+let currentFilter='全部';
+let currentFiltered=[];
+let currentLbIndex=0;
+let isAdmin=false;
+let guests=[];
+
+function checkAdmin(){const p=prompt('請輸入小管家密碼');if(p==='wendy2026'){isAdmin=true;return true;}alert('密碼錯誤');return false;}
+
+function load(){
+  const savedPref=localStorage.getItem('wendy_preface_final_v27');
+  const pref=savedPref||defaultPreface;
+  document.getElementById('prefaceContent').textContent=pref;
+  document.getElementById('adminPreface').value=pref;
+
+  const savedContact=localStorage.getItem('wendy_contact_v27');
+  const cont=savedContact||defaultContact;
+  document.getElementById('contactContent').textContent=cont;
+  document.getElementById('adminContact').value=cont;
+
+  const saved=localStorage.getItem('wendy_final_v27');
+  if(saved){try{const s=JSON.parse(saved); if(Array.isArray(s)&&s.length>0) paintings=s;}catch(e){}}
+  render();
+  const g=localStorage.getItem('wendy_guests_v27');
+  if(g){try{guests=JSON.parse(g);renderGuests();}catch(e){}}
+}
+
+function save(){localStorage.setItem('wendy_final_v27', JSON.stringify(paintings));}
+function savePreface(){if(!isAdmin&&!checkAdmin()) return; const v=document.getElementById('adminPreface').value;localStorage.setItem('wendy_preface_final_v27',v);document.getElementById('prefaceContent').textContent=v;alert('序言已儲存！');}
+function resetPreface(){if(!isAdmin&&!checkAdmin()) return; localStorage.removeItem('wendy_preface_final_v27');document.getElementById('prefaceContent').textContent=defaultPreface;document.getElementById('adminPreface').value=defaultPreface;}
+function saveContact(){if(!isAdmin&&!checkAdmin()) return; const v=document.getElementById('adminContact').value;localStorage.setItem('wendy_contact_v27',v);document.getElementById('contactContent').textContent=v;alert('聯絡已儲存！');}
+
+function render(){
+  const grid=document.getElementById('grid');grid.innerHTML='';
+  let filtered=paintings.filter(p=>currentFilter==='全部'||p.category===currentFilter);
+  filtered.sort((a,b)=>parseInt(a.id)-parseInt(b.id));
+  currentFiltered=filtered.slice();
+  currentFiltered.forEach((p, idx)=>{
+    const seq=currentFiltered.length - idx;
+    const rot=p.rotate||0;
+    const div=document.createElement('div');div.className='card';
+    div.innerHTML='<div class="numBadge">#'+seq+'</div><img loading="lazy" src="https://wendyycfung-stack.github.io/wendy-gallery/'+p.id+'.jpg" style="transform:rotate('+rot+'deg)" onerror="this.src=\'https://via.placeholder.com/400x300/fdfaf3/3d2b1f?text='+p.id+'\'"><div class="meta"><span class="badge b-'+p.category+'">'+p.category+' #'+seq+'</span><span class="id">原圖'+p.id+'</span></div>';
+    div.onclick=()=>openLbBySeq(idx);
+    grid.appendChild(div);
+  });
+}
+
+function filterTo(f){currentFilter=f;document.querySelectorAll('.filters button').forEach(b=>b.classList.toggle('active',b.dataset.f===f));render();}
+function openLbBySeq(i){currentLbIndex=i; openLb(currentFiltered[i].id, i);}
+function openLb(id, seqIdx){
+  if(typeof seqIdx==='number') currentLbIndex=seqIdx;
+  else {
+    const found=currentFiltered.findIndex(x=>x.id===id);
+    if(found>=0) currentLbIndex=found;
+  }
+  const p=paintings.find(x=>x.id===id); if(!p) return;
+  const img=document.getElementById('lbImg');
+  img.src='https://wendyycfung-stack.github.io/wendy-gallery/'+id+'.jpg';
+  img.style.transform='rotate('+(p.rotate||0)+'deg)';
+  const seq=currentFiltered.length - currentLbIndex;
+  document.getElementById('lbCounter').textContent=seq+' / '+currentFiltered.length+' | 原圖 '+id;
+  const catLabel=p.category+'-'+String(p.catIndex).padStart(2,'0');
+  document.getElementById('lbInfo').innerHTML='<div class="lb-title">#'+seq+' '+p.title+'</div><div class="lb-meta"><span class="badge b-'+p.category+'">'+catLabel+'</span> 原圖 <b>'+p.id+'.jpg</b> (215系統) | 版面 #'+seq+'/'+currentFiltered.length+'<br>山水1,2,3在最前號碼最大 | 1號最下新圖最前</div><div class="lb-note" id="lbNoteDisplay" style="cursor:pointer" onclick="editNote(\''+id+'\')"><b>感言 (按此編輯)：</b> '+(p.note||'（未填，點此加上）')+'</div><div style="margin-top:8px"><b>旋轉編輯 (全權限)：</b><br><button class="rotate-btn" onclick="rotateImg(\''+id+'\',90)">↻90°</button><button class="rotate-btn" onclick="rotateImg(\''+id+'\',180)">↻180°</button><button class="rotate-btn" onclick="rotateImg(\''+id+'\',-90)">↺90°</button><button class="rotate-btn" onclick="rotateImg(\''+id+'\',0,true)">重置</button><span style="font-size:10px;margin-left:6px;opacity:0.6">現：'+(p.rotate||0)+'°</span><div style="font-size:10px;opacity:0.6;margin-top:4px">山水115月亮在上 | 花7,8花向上40柄向下 | 人物2,7頭向上</div></div><div style="margin-top:8px"><input id="lbTitleInput" value="'+p.title.replace(/"/g,'&quot;')+'" placeholder="改標題" style="width:100%;font-size:12px;padding:4px"><button class="small" onclick="saveTitle(\''+id+'\')">儲存標題</button></div>';
+  document.getElementById('lb').classList.add('on');
+}
+
+function editNote(id){const p=paintings.find(x=>x.id===id); if(!p) return; const nv=prompt('編輯感言 ('+id+')：', p.note||''); if(nv!==null){p.note=nv; save(); render(); document.getElementById('lbNoteDisplay').innerHTML='<b>感言：</b> '+(nv||'（未填）');}}
+function saveTitle(id){const p=paintings.find(x=>x.id===id); const v=document.getElementById('lbTitleInput').value; if(p){p.title=v; save(); render(); alert('標題已改：'+v);}}
+function rotateImg(id, deg, reset=false){
+  const p=paintings.find(x=>x.id===id);
+  if(!p) return;
+  if(reset) p.rotate=0;
+  else p.rotate=((p.rotate||0)+deg)%360;
+  save();
+  const img=document.getElementById('lbImg');
+  if(img) img.style.transform='rotate('+(p.rotate||0)+'deg)';
+  render();
+}
+function lbPrev(e){e.stopPropagation(); currentLbIndex=(currentLbIndex-1+currentFiltered.length)%currentFiltered.length; openLb(currentFiltered[currentLbIndex].id, currentLbIndex);}
+function lbNext(e){e.stopPropagation(); currentLbIndex=(currentLbIndex+1)%currentFiltered.length; openLb(currentFiltered[currentLbIndex].id, currentLbIndex);}
+function closeLb(){document.getElementById('lb').classList.remove('on');}
+document.addEventListener('keydown', e=>{if(!document.getElementById('lb').classList.contains('on')) return; if(e.key==='ArrowLeft') lbPrev(e); if(e.key==='ArrowRight') lbNext(e); if(e.key==='Escape') closeLb();});
+document.getElementById('lb').addEventListener('click', e=>{if(e.target.id==='lb') closeLb();});
+
+function toggleAdmin(){if(!isAdmin&&!checkAdmin()) return; document.getElementById('adminPanel').classList.toggle('open');document.getElementById('ov').classList.toggle('on'); if(document.getElementById('adminPanel').classList.contains('open')) renderAdminList();}
+
+function renderAdminList(){
+  const q=(document.getElementById('searchPaint').value||'').toLowerCase();
+  const list=document.getElementById('adminList');list.innerHTML='';
+  paintings.filter(p=>!q||p.id.toLowerCase().includes(q)||p.title.toLowerCase().includes(q)||p.category.includes(q)).slice(0,80).forEach(p=>{
+    const d=document.createElement('div');d.style.borderBottom='1px solid #eee';d.style.padding='8px 0';d.style.fontSize='11px';
+    d.innerHTML='<div style="font-weight:700">'+p.id+' '+p.category+'-'+p.catIndex+' '+p.title+' <span style="opacity:0.6">旋轉:'+(p.rotate||0)+'°</span></div><div style="display:flex;gap:4px;flex-wrap:wrap;margin-top:4px"><input style="flex:1;min-width:80px" value="'+p.title.replace(/"/g,'&quot;')+'" oninput="updateField(\''+p.id+'\',\'title\',this.value)" placeholder="標題"><select onchange="updateField(\''+p.id+'\',\'category\',this.value)"><option '+(p.category==='山水'?'selected':'')+'>山水</option><option '+(p.category==='花鳥'?'selected':'')+'>花鳥</option><option '+(p.category==='人物'?'selected':'')+'>人物</option></select></div><textarea rows="2" placeholder="感言" oninput="updateField(\''+p.id+'\',\'note\',this.value)">'+(p.note||'')+'</textarea><div><input style="width:70%" value="'+(p.sub||'')+'" oninput="updateField(\''+p.id+'\',\'sub\',this.value)" placeholder="副主題"><button class="rotate-btn" onclick="rotateImg(\''+p.id+'\',90)">↻90°</button><button class="rotate-btn" onclick="rotateImg(\''+p.id+'\',180)">180°</button><button class="rotate-btn" onclick="rotateImg(\''+p.id+'\',-90)">↺90°</button><button class="rotate-btn" onclick="rotateImg(\''+p.id+'\',0,true)">重置</button></div>';
+    list.appendChild(d);
+  });
+}
+
+function updateField(id,field,val){const p=paintings.find(x=>x.id===id); if(p){p[field]=val; save(); render();}}
+function addPainting(){
+  const id=(document.getElementById('newId').value||'').padStart(3,'0');
+  const title=document.getElementById('newTitle').value||'新作品';
+  const cat=document.getElementById('newCat').value;
+  const sub=document.getElementById('newSub').value||'';
+  const note=document.getElementById('newNote').value||'';
+  if(!id){alert('請輸入ID');return;}
+  const ex=paintings.find(p=>p.id===id);
+  if(ex){ex.title=title;ex.category=cat;ex.sub=sub;ex.note=note;}
+  else{paintings.push({id,title,category:cat,sub,note,catIndex:1,rotate:0});}
+  paintings.sort((a,b)=>parseInt(a.id)-parseInt(b.id));
+  let c1=1,c2=1,c3=1; paintings.forEach(p=>{if(p.category==='山水') p.catIndex=c1++; else if(p.category==='花鳥') p.catIndex=c2++; else p.catIndex=c3++;});
+  save(); render(); renderAdminList(); alert('已加入：'+id);
+}
+function deletePainting(){
+  const id=(document.getElementById('newId').value||'').padStart(3,'0');
+  if(!id){alert('請輸入要刪的ID');return;}
+  if(!confirm('確定刪除 '+id+' ?')) return;
+  paintings=paintings.filter(p=>p.id!==id);
+  save(); render(); renderAdminList(); alert('已刪除 '+id);
+}
+function exportHTML(){const h=document.documentElement.outerHTML;const b=new Blob([h],{type:'text/html'});const a=document.createElement('a');a.href=URL.createObjectURL(b);a.download='index.html';a.click();}
+function exportCSV(){let csv='ID,標題,類別,副主題,感言,旋轉\n';paintings.forEach(p=>{csv+=p.id+',"'+p.title.replace(/"/g,'""')+'",'+p.category+',"'+(p.sub||'').replace(/"/g,'""')+'","'+(p.note||'').replace(/"/g,'""')+'",'+(p.rotate||0)+'\n';});const b=new Blob([csv],{type:'text/csv;charset=utf-8'});const a=document.createElement('a');a.href=URL.createObjectURL(b);a.download='wendy-INDEX27.csv';a.click();}
+function addGuest(){const n=document.getElementById('guestName').value||'訪客';const m=document.getElementById('guestMsg').value;if(!m) return;guests.unshift({name:n,msg:m,time:new Date().toLocaleString()});localStorage.setItem('wendy_guests_v27',JSON.stringify(guests));document.getElementById('guestMsg').value='';renderGuests();}
+function renderGuests(){const l=document.getElementById('guestList');l.innerHTML='';guests.forEach(g=>{const d=document.createElement('div');d.className='guest-item';d.innerHTML='<b>'+g.name+'</b> <span class="meta">'+g.time+'</span><div>'+g.msg.replace(/</g,'&lt;')+'</div>';l.appendChild(d);});}
+function clearGuests(){if(confirm('清空留言？')){guests=[];localStorage.setItem('wendy_guests_v27','[]');renderGuests();}}
+function exportGuests(){const b=new Blob([JSON.stringify(guests,null,2)],{type:'application/json'});const a=document.createElement('a');a.href=URL.createObjectURL(b);a.download='guestbook-INDEX27.json';a.click();}
+load();
+</script>
+<footer style="text-align:center;padding:12px;opacity:0.5;font-size:10px">© 2026 WENDY FUNG · 210 Works · INDEX 27 v2026-10-11 FINAL | 全權限開放 | Chrome顯示 Index (27).html 是下載次數，真正版本看上面黑色標籤</footer>
+</body>
+</html>
